@@ -46,6 +46,7 @@ html,body{
   width: 200px;
   height: 100%;
   margin-left: -200px;
+  z-index: 999;
 }
 
 /* ヘッダー */
@@ -53,6 +54,8 @@ html,body{
   position: relative;
   z-index: 1;
   -webkit-transform: skewY(-5deg);    /* 斜面-5 */
+  -moz-transform: rotate(-5deg);
+  -ms-transform:  rotate(-5deg );
   margin-top: 60px;                   /* 左上から60pxの位置 */
   margin-bottom: 50px;                /* ヘッダーの下のスペース50px */
   width: 100%;                        /* 横幅を100% */

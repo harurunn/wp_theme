@@ -1,0 +1,43 @@
+/* body,htmlの全体にかける処理 */
+html,body{
+  margin: 0;    /* 余白の削除 */
+  padding: 0;   /* 余白の削除 */
+  width:100%;
+  height:100%;
+}
+
+
+/* 固定ヘッダー */
+div#froot{
+  position: fixed;    /* ヘッダーの固定 */
+  top: 0px;           /* 左上から0のところから */
+  left: 0px;          /* 左上から左に0のところから */
+  width: 100%;        /* 横幅を100% */
+  height: 100px;      /* 縦幅を100pxぐらいで見積もりする */
+  z-index: 999;       /* レイヤーの表示優先度を１番高くする */
+}
+/* ナビゲーションバー */
+div#frootNavigate{
+  background-color: red;    /* 好きな色を指定 */
+  width: 100%;              /* 横幅を100% */
+  height: 30px;             /* 高さを30px */
+}
+/* サイドバーの画像を表示する領域 */
+div#frootSidebar{
+  margin-top: 10px;     /*ナビゲーションバーからのマージン10px */
+}
+/* サイドバーの画像の詳細 */
+#frootSidebar input.naviButton{
+  width: 50px;    /* 画像の横幅50px */
+  height: 50px;   /* 画像の縦幅50px */
+}
+
+
+/* ヘッダー */
+#header img{
+  -webkit-transform: skewY(-5deg);    /* 斜面-5 */
+  margin-top: 60px;                   /* 左上から60pxの位置 */
+  margin-bottom: 50px;                /* ヘッダーの下のスペース50px */
+  width: 100%;                        /* 横幅を100% */
+  height: 100px;                       /* 立て幅50px */
+}

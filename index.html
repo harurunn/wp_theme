@@ -3,6 +3,8 @@
   <head>
     <!-- 文字コードはutf-8 -->
     <meta charset="utf-8">
+    <!-- 検索キーワードの追加 -->
+    <meta name=”keywords” content=”ブログ,プログラミング”>
     <!-- 検索した時のホームページの説明 -->
     <meta name="description" content="はるやさいのブログです是非お立ち寄りください" />
     <!-- タイトル -->
@@ -11,30 +13,71 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="all" />
     </head>
   <body>
+    <div id="wrapper">
 
-    <div id="froot">
-      <div id="frootNavigate">
-        frootNavigate
-      </div><!-- frootNavigate -->
-      <div id="frootSidebar">
-        <input type="image" class="naviButton" src="images/tw.png" alt="sidebar" />
-      </div><!-- frootsidebar -->
-    </div><!-- froot -->
-    <!-- ここまでfroot(画面に対して絶対値をとる)するもの -->
+        <div id="frootNavigate">
+          frootNavigate
+        </div><!-- frootNavigate -->
+        <div id="frootSidebar">
+          <input type="image" class="naviButton" src="images/tw.png" alt="sidebar"/>
+        </div><!-- frootsidebar -->
+        <div id="Sidebar">
+          Sidebar
+        </div>
+        <!-- ここまでフロート -->
 
-    <div id="header">
-  		<h1><a href="#"><img src="images/logo.png" alt="noimage"/></a></h1>
-  	</div><!-- header -->
+        <div id="header">
+          <h1><a href="#"><img src="images/rogo.png" alt="noImage" class="rogo" /></a></h1>
+        </div><!-- header -->
+        <!-- ここまでヘッダー -->
 
-  	<div id="content">
-  		<div class="post">
-  			<h2><a href="#">記事タイトル</a></h2>
-  			<p>記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋</p>
-  		</div>
-  	</div><!-- content -->
-  	<div id="footer">
-  		<p>&copy;2016 harurunn</p>
-  	</div><!-- footer -->
+        <div id="content">
+          <div class="post">
+            <h2><a href="#">記事タイトル</a></h2>
+            <p>記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋</p>
+            <h2><a href="#">記事タイトル</a></h2>
+            <p>記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋</p>
+            <h2><a href="#">記事タイトル</a></h2>
+            <p>記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋記事の抜粋</p>
+          </div>
+        </div><!-- content -->
+        <!-- ここまでコンテンツ -->
 
+        <div id="footer">
+          <p>&copy;2016 harurunn</p>
+        </div><!-- footer -->
+
+    </div><!-- wrapper -->
+    <!-- ここまでfroot部品 -->
+
+
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var flag = true;
+
+        $(".naviButton").on("click", function() {
+            if (flag) {
+                $("#frootNavigate").animate({
+                    marginLeft: -200
+                });
+                $("#wrapper").animate({
+                    left: 0
+                });
+            } else {
+                $("#frootNavigate").animate({
+                    marginLeft: 0
+                });
+                $("#wrapper").animate({
+                    left: -200
+                });
+            }
+            flag = !flag;
+        });
+    });
+    </script>
   </body>
 </html>

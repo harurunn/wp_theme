@@ -7,37 +7,54 @@ html,body{
 }
 
 
-/* 固定ヘッダー */
-div#froot{
-  position: fixed;    /* ヘッダーの固定 */
+/* ラッパー */
+
+#wrapper{
+  position: absolute;    /* ヘッダーの固定 */
   top: 0px;           /* 左上から0のところから */
-  left: 0px;          /* 左上から左に0のところから */
+  left: -200px;
+  padding-left: 200px;
   width: 100%;        /* 横幅を100% */
-  height: 100px;      /* 縦幅を100pxぐらいで見積もりする */
-  z-index: 999;       /* レイヤーの表示優先度を１番高くする */
+  height: 100%;      /* 縦幅を100%*/
 }
 /* ナビゲーションバー */
-div#frootNavigate{
+#frootNavigate{
+  position: fixed;
   background-color: red;    /* 好きな色を指定 */
   width: 100%;              /* 横幅を100% */
-  height: 30px;             /* 高さを30px */
+  height: 30px;
+  margin-left: 0px;
+  z-index: 999;        /* 高さを30px */
 }
 /* サイドバーの画像を表示する領域 */
-div#frootSidebar{
-  margin-top: 10px;     /*ナビゲーションバーからのマージン10px */
+#frootSidebar{
+  position: fixed;
+  z-index: 999;
 }
 /* サイドバーの画像の詳細 */
 #frootSidebar input.naviButton{
+  margin-top: 30px;
   width: 50px;    /* 画像の横幅50px */
   height: 50px;   /* 画像の縦幅50px */
 }
-
+/* サイドバー */
+#Sidebar{
+  overflow: auto;
+  position: fixed;
+  margin-top: 30px;
+  background-color: black;
+  width: 200px;
+  height: 100%;
+  margin-left: -200px;
+}
 
 /* ヘッダー */
-#header img{
+#header .rogo{
+  position: relative;
+  z-index: 1;
   -webkit-transform: skewY(-5deg);    /* 斜面-5 */
   margin-top: 60px;                   /* 左上から60pxの位置 */
   margin-bottom: 50px;                /* ヘッダーの下のスペース50px */
   width: 100%;                        /* 横幅を100% */
-  height: 100px;                       /* 立て幅50px */
+  height: 200px;                       /* 立て幅50px */
 }
